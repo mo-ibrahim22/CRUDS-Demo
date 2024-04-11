@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="text-center">CRUDS</h1>
+        <div class="container py-5" id="productDetails">
+
+            <div class="form-group mb-4">
+                <label for="productNameInput" class="form-label">Product Name:</label>
+                <input class="form-control" type="text" id="productNameInput">
+            </div>
+            <div class="form-group mb-4">
+                <label for="productPriceInput" class="form-label">Product Price:</label>
+                <input class="form-control" type="number" id="productPriceInput">
+            </div>
+            <div class="form-group mb-4">
+                <label for="productCategoryInput" class="form-label">Product Category:</label>
+                <input class="form-control" type="text" id="productCategoryInput">
+            </div>
+            <div class="form-group mb-4">
+                <label for="productDescInput" class="form-label">Product Description:</label>
+                <textarea class="form-control" type="text" id="productDescInput"></textarea>
+            </div>
+            <button class="btn btn-info mt-2 " id="addProductBtn" onclick="addProduct()">Add Product</button>
+            <button class="btn btn-warning mt-2 " id="updateProductBtn" onclick="updateProduct()">Update
+                Product</button>
+
+        </div>
+
+        <div class="container w-75 m-auto py-5">
+            <input type="text" class="form-control mb-2" id="searchInput" placeholder="Search Product..."
+                onkeyup="searchProduct()">
+            <table class="table table-bordered" id="productTable">
+                <thead>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                        <th>Product Price</th>
+                        <th>Product Category</th>
+                        <th>Product Description</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="productTableBody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/cruds.js"></script>
+</body>
+
+</html>
